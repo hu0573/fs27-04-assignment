@@ -57,9 +57,66 @@ h1 {
   background-color: #d9833b;
   color: white;
   cursor: pointer;
+  transition: background-color 1s;
 }
 
 .form button:hover,
 .form button:focus {
   background-color: #c5722f;
+  outline-offset: 2px;
+  outline: 2px solid #c5722f;
+}
+
+/* #fillFake {
+  font-size: 1rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #d9833b;
+  color: white;
+  cursor: pointer;
+  transition: background-color 1s;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+}
+
+#fillFake:hover,
+#fillFake:focus {
+  background-color: #c5722f;
+  outline-offset: 2px;
+  outline: 2px solid #c5722f;
+} */
+
+#fillFake {
+  font-size: 1rem;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(270deg, #b24434, #4a9e87, #eac645);
+  background-size: 400% 400%;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  animation: gradientMove 5s ease infinite; /* 5秒渐变循环 */
+}
+
+#fillFake:hover,
+#fillFake:focus {
+  outline-offset: 2px;
+  outline: 2px solid #c5722f;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
